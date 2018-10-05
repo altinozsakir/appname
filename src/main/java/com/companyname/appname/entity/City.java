@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="cities")
-public class City extends BaseEntity {
+public class City extends UserBaseEntity {
     @NotBlank
     @Size(max=40)
     private String name;
