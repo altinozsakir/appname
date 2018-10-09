@@ -1,7 +1,6 @@
 package com.companyname.appname.entity;
 
 
-import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
