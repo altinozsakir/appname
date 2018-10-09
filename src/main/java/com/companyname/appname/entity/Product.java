@@ -1,4 +1,9 @@
 package com.companyname.appname.entity;
 
-public class Product {
+import javax.persistence.Entity;
+
+@Entity
+public class Product extends UserBaseEntity {
+
+
 }
