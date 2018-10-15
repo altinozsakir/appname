@@ -1,6 +1,7 @@
 package com.companyname.appname.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.sun.xml.internal.ws.developer.UsesJAXBContext;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -29,6 +30,9 @@ public abstract class BaseEntity implements Serializable {
     @Column(nullable = false)
     private Instant updatedAt;
 
+    @Column(columnDefinition = "tinyint(1) default 1")
+    private boolean status;
+
     public Long getId() {
         return id;
     }
@@ -51,5 +55,13 @@ public abstract class BaseEntity implements Serializable {
 
     public void setUpdatedAt(Instant updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 }

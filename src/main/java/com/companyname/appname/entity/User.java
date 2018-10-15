@@ -23,12 +23,6 @@ public class User extends BaseEntity {
 
     @NotBlank
     @Size(min=3,max=50)
-    private String name;
-    @NotBlank
-    @Size(min=3,max=50)
-    private String surname;
-    @NotBlank
-    @Size(min=3,max=50)
     private String username;
     @NaturalId
     @NotBlank
@@ -57,29 +51,12 @@ public class User extends BaseEntity {
 
     }
 
-    public User(@NotBlank @Size(min = 3, max = 50) String name, @NotBlank @Size(min = 3, max = 50) String surname, @NotBlank @Size(min = 3, max = 50) String username, @NotBlank @Size(max = 100) @Email String email, @NotBlank @Size(max = 100) String password) {
-        this.name = name;
-        this.surname = surname;
+    public User(@NotBlank @Size(min = 3, max = 50) String username, @NotBlank @Size(max = 100) @Email String email, @NotBlank @Size(max = 100) String password) {
         this.username = username;
         this.email = email;
         this.password = password;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
 
     public String getUsername() {
         return username;

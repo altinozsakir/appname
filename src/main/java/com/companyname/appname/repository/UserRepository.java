@@ -1,5 +1,6 @@
 package com.companyname.appname.repository;
 
+import com.companyname.appname.entity.Role;
 import com.companyname.appname.entity.User;
 
 import org.springframework.data.jpa.repository.JpaRepository;
