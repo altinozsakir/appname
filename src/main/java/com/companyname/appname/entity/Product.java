@@ -6,11 +6,17 @@ import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
+@Table(name="products")
 public class Product extends UserBaseEntity {
 
 	public Product(String name){
 		this.name = name;
 	}
+
+	public Product() {
+
+	}
+
 	@NotBlank
 	@Size(min=3,max=50)
 	private String name;

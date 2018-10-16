@@ -38,6 +38,8 @@ public class DatabaseLoader implements CommandLineRunner {
         user.setRoles(Roles);
         userRepository.save(user);
 
+        Product product = new Product("test product");
+        productRepository.save(product);
 
     }
 
